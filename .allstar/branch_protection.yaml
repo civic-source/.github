@@ -1,4 +1,11 @@
+# Solo-maintainer organization policy: protect default branches (require PRs
+# and block force pushes/deletions) without requiring a second GitHub user
+# account to approve PRs (GitHub forbids self-approval by the PR author).
 optConfig:
   optOutStrategy: true
 action: issue
-requireApprovalCount: 1
+enforceDefault: true
+requireApproval: false
+approvalCount: 0
+dismissStale: false
+blockForce: true
